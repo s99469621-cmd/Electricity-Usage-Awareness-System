@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Usage Awareness System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>⚡ Electricity Awareness System</h1>
+        <p>Monitor your electricity consumption and save energy!</p>
+    </header>
+
+    <main class="container">
+
+        <section class="summary">
+            <div class="card">
+                <h3>Daily Usage</h3>
+                <p id="dailyUsage">0 kWh</p>
+            </div>
+
+            <div class="card">
+                <h3>Monthly Usage</h3>
+                <p id="monthlyUsage">0 kWh</p>
+            </div>
+
+            <div class="card">
+                <h3>Estimated Bill</h3>
+                <p id="estimatedBill">₹0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add Electrical Appliance</h2>
+
+            <form id="applianceForm">
+
+                <label>Appliance Name</label>
+                <input type="text" id="applianceName"
+                    placeholder="Example: Fan" required>
+
+                <label>Power (Watts)</label>
+                <input type="number" id="power"
+                    placeholder="Example: 75" min="1" required>
+
+                <label>Daily Usage (Hours)</label>
+                <input type="number" id="hours"
+                    placeholder="Example: 8" min="0.1" max="24"
+                    step="0.1" required>
+
+                <button type="submit">Add Appliance</button>
+
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Appliance Consumption Details</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Appliance</th>
+                        <th>Power (W)</th>
+                        <th>Hours/Day</th>
+                        <th>Daily Units</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="applianceList">
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tips">
+            <h2>💡 Energy Saving Tips</h2>
+            <ul>
+                <li>Switch off lights when not in use.</li>
+                <li>Use LED bulbs instead of traditional bulbs.</li>
+                <li>Unplug unused electrical devices.</li>
+                <li>Use energy-efficient appliances.</li>
+                <li>Make use of natural sunlight during daytime.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Electricity Usage Awareness System | Mini Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
